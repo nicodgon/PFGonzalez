@@ -58,7 +58,7 @@
 }
 
 .principal {
-    background: linear-gradient(to right, hsla(0, 80%, 48%, 0.301), hsla(0, 0%, 20%, 0.227)), url(../Imagenes/ImagenPrincipal.jpg);
+    background-image: url(../Imagenes/ImagenPrincipal.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -78,6 +78,7 @@
 
     p {
         color: #000;
+        text-shadow: 1px 1px 5px #fff;
         font-weight: bold;
         font-size: 1.6em;
         margin-left: 18%;
