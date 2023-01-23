@@ -45,7 +45,11 @@
 }
 
 .principal {
-  background-image: url(../Imagenes/ImagenPrincipal.jpg);
+  background: #333333;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsla(0deg, 80%, 48%, 0.301), hsla(0deg, 0%, 20%, 0.227)), url(../imagenes/imagenprincipal.jpg);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -211,7 +215,7 @@
 }
 
 .principalSN {
-  background-image: url(../Imagenes/fondo2.jpg);
+  background-image: url(../imagenes/fondo2.jpg);
   background-size: cover;
   background-position: -27em;
 }
