@@ -268,18 +268,18 @@
         text-align: center;
         color: #fff;
         margin-top: 1em;
-        font-size: 1em;
+        font-size: .9em;
         animation: enviostexto 1.3s infinite;
         text-shadow: 2px 2px 1px map-get(c.$colores,"bordes");
     }
 
     @keyframes enviostexto {
         50% {
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         100% {
-            font-size: 1em;
+            font-size: .9em;
         }
     }
 }

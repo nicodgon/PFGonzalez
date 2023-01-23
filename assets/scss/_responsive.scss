@@ -16,7 +16,7 @@
 
     .contenedor__tiendaSN {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 55em 37em auto auto;
+        grid-template-rows: auto 55em 45em auto auto;
         grid-template-areas:
             "sup sup"
             "prin prin"
@@ -213,6 +213,11 @@
                 font-size: 1.5em;
             }
         }
+    }
+
+    //Envío Correo Argentino
+    .envios {
+        background-position-y:center;
     }
 
     // Metas
