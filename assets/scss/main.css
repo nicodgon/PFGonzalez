@@ -377,6 +377,14 @@
   .contenedor__imagen img {
     width: 300px;
   }
+  .contenedor__contacto .ingreso {
+    width: 50%;
+    height: 2em;
+  }
+  .contenedor__contacto .boton {
+    width: 10em;
+    height: 2.2em;
+  }
   .principal2 h1 {
     font-size: 3em;
   }
