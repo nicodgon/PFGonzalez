@@ -1,0 +1,333 @@
+@use 'commons' as c;
+
+// Global
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    ;
+}
+
+// Grilla
+.contenedor__tienda {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas:
+        "sup"
+        "prin"
+        "imag"
+        "contacto"
+        "cont"
+        "inf";
+}
+
+.contenedor__tiendaSN {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 42em 20em auto auto;
+    grid-template-areas:
+        "sup"
+        "prin"
+        "envio"
+        "prin2"
+        "inf";
+}
+
+//Barra de navegación
+.superior {
+    grid-area: sup;
+}
+
+.logo {
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    animation: logo 5s infinite;
+
+    @keyframes logo {
+        50% {
+            box-shadow: 0 0 4px #fff;
+        }
+    }
+}
+
+// Parte principal
+.principal__grid {
+    grid-area: prin;
+}
+
+.principal {
+    background: #333333;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(0, 80%, 48%, 0.301), hsla(0, 0%, 20%, 0.227)), url(../Imagenes/ImagenPrincipal.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 5em;
+        color: map-get(c.$colores, "h1");
+        font-weight: bold;
+        text-shadow: 3px 3px 5px map-get(c.$colores, "bordes");
+    }
+
+    p {
+        color: #000;
+        font-weight: bold;
+        font-size: 1.6em;
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+
+    h3 {
+        color: rgba(0, 0, 0, 0.701);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2.5em;
+        padding-top: 2em;
+    }
+}
+
+//Contacto
+.contenedor__imagen {
+    grid-area: imag;
+    background-color: #000;
+    text-align: center;
+
+    img {
+        width: 200px;
+        margin-top: 4em;
+    }
+}
+
+.contenedor__contacto {
+    grid-area: contacto;
+    background-color: #000;
+    
+
+    h3 {
+        color: #fff;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 2em 1em 0 1em;
+    }
+
+    .contacto__flex {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+        align-items: center;
+    }
+
+    .ingreso {
+        margin-top: .3em;
+        width: 16em;
+        height: 1.5em;
+
+        &::placeholder {
+            font-weight: bold;
+        }
+    }
+
+    .boton {
+        margin-top: .8em;
+        margin-bottom: 4em;
+        width: 9em;
+        height: 1.8em;
+        border-radius: 9px;
+        background-color: #219375;
+    }
+}
+
+// Parte principal productos
+.principal2 {
+    background-image: linear-gradient(#200122, #580404);
+    padding-bottom: 4em;
+
+    h1 {
+        color: #fff;
+        font-weight: bold;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    h3 {
+        color: #fff;
+    }
+
+    // Imagenes
+    .contenedor__imagenes1, .contenedor__imagenes2, .contenedor__imagenes3 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    @mixin Imagenes ($anchoImagen, $altoImagen) {
+        width: $anchoImagen;
+        height: $altoImagen;
+        border: map-get(c.$colores, "bordes") solid 2px;
+        border-radius: calc(c.$border-r*4);
+        box-shadow: c.$shadow;
+    }
+
+    .remera {
+        @include Imagenes (14em, 12em);
+    }
+
+    .pantalon {
+        @include Imagenes (12em, 15em);
+    }
+
+    .zapatilla {
+        @include Imagenes (14em, 10em);
+    }
+
+    .img__flex {
+        margin: 2em 0 2em 0;
+    }
+}
+
+//Iformacion sobre los productos
+.contenedor__info--prod {
+    grid-area: cont;
+    border-top: 4px solid #000;
+    background-color: rgb(36, 30, 52);
+    display: flex;
+    align-items: center;
+
+    @mixin info__editable ($pad--prod){
+        img {
+            width: 8em;
+            padding: $pad--prod;
+        }
+    
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: #aaa;
+            padding: 2em 1em 1em 1em;
+        }
+    }
+    
+    .flex__informacion--calz {
+        @include info__editable ($pad--prod:0 0 4em 1em);
+    }
+    
+    .flex__informacion--pant {
+        @include info__editable ($pad--prod:0);
+    }
+    
+    .flex__informacion--rem {
+        @include info__editable ($pad--prod:0);
+    }
+}
+
+//Parte principal Sobre Nosotros
+.principalSN {
+    background-image: url(../Imagenes/fondo2.jpg);
+    background-size: cover;
+    background-position: -27em;
+
+    h1 {
+        font-weight: bold;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        text-align: center;
+        font-size: 4em;
+        color: map-get(c.$colores, "h1");
+        text-shadow: 3px 3px 5px map-get(c.$colores, "bordes");
+    }
+
+    h2 {
+        border-radius: .25em;
+        font-weight: bold;
+        margin: 0 13% 3em 13%;
+        text-align: center;
+        font-size: 1.4em;
+        text-shadow: 1px 1px 3px #777;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background-color: rgba(170, 170, 170, 0.2);
+    }
+
+    .llamativo__SN {
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        margin-top: 1em;
+        font-size: 1em;
+        animation: enviostexto 1.3s infinite;
+        text-shadow: 2px 2px 1px map-get(c.$colores,"bordes");
+    }
+
+    @keyframes enviostexto {
+        50% {
+            font-size: 1.2em;
+        }
+
+        100% {
+            font-size: 1em;
+        }
+    }
+}
+
+//Envío Correo Argentino
+.envios {
+    grid-area: envio;
+    border-top: 4px solid #000;
+    background-image: url(../imagenes/correo.jpg);
+    background-size: cover;
+    background-position-x: right;
+}
+
+// Metas
+.principal__SN2 {
+    grid-area: prin2;
+    background-color: #16161a;
+    border-top: 4px solid #000;
+
+    h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        padding: 1em;
+        color: rgb(53, 20, 113);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contenedor__flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .flex__sn {
+            text-align: center;
+        }
+
+        .mundo {
+            width: 190px;
+        }
+
+        .calidad {
+            width: 130px;
+        }
+    }
+
+    p {
+        padding: 2em 20%;
+        color: #fff;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,248 @@
+@use 'commons' as c;
+
+// Responsive
+@media only screen and (min-width:768px) {
+    // Grilla
+    .contenedor__tienda {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "sup sup"
+            "prin prin"
+            "imag contacto"
+            "cont cont"
+            "inf inf";
+    }
+
+    .contenedor__tiendaSN {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 55em 37em auto auto;
+        grid-template-areas:
+            "sup sup"
+            "prin prin"
+            "envio envio"
+            "prin2 prin2"
+            "inf inf";
+    }
+
+    //Barra de navegación
+    .pag a{
+        position: relative;
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &::after {
+            content :"";
+            opacity: 0;
+            transition: all .2s;
+            height: 2px;
+            width: 100%;
+            background-color: rgba(126, 41, 41, 0.648);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:hover::after {
+                opacity: 1;
+        }
+    }
+
+    .logo:hover {
+        width: 59px;
+    }
+
+    // Parte principal
+    .principal {
+        padding-top: 15em;
+        flex-direction: row;
+
+        h1 {
+            font-size: 9em;
+        }
+
+        p {
+            font-size: 2.8em;
+        }
+
+        h3 {
+            font-size: 5em;
+            padding-top: 1em;
+        }
+    }
+
+    //Contacto
+    .contenedor__imagen {
+        img {
+            width: 240px;
+        }
+    }
+
+    // Parte principal productos
+    .principal2 {
+        h1 {
+            font-size: 3em;
+        }
+
+        // Imagenes
+        .contenedor__imagenes1, .contenedor__imagenes2, .contenedor__imagenes3 {
+            flex-direction: row;
+        }
+
+        @mixin Imagenes ($anchoImagen,$altoImagen){
+            width: $anchoImagen;
+            height: $altoImagen;
+            border: map-get(c.$colores, "bordes") solid 2px;
+            border-radius: calc(c.$border-r*4);
+            box-shadow: c.$shadow;
+        }
+    
+        .remera {
+            @include Imagenes (16em, 14em);
+
+            &:hover {
+                width: 16em;
+                height: 14em;
+                border: map-get(c.$colores, "bordesH") solid 4px;
+                border-radius: calc(c.$border-r*4);
+                box-shadow: c.$shadow;
+            }
+        }
+    
+        .pantalon {
+            @include Imagenes (15em, 18em);
+
+            &:hover {
+                width: 15em;
+                height: 18em;
+                border: map-get(c.$colores, "bordesH") solid 4px;
+                border-radius: calc(c.$border-r*4);
+                box-shadow: c.$shadow;
+            }
+        }
+    
+        .zapatilla {
+            @include Imagenes (18em, 14em);
+
+            &:hover {
+                width: 18em;
+                height: 14em;
+                border: map-get(c.$colores, "bordesH") solid 4px;
+                border-radius: calc(c.$border-r*4);
+                box-shadow: c.$shadow;
+            }
+        }
+    
+        .img__flex {
+            margin: 2em 6em;
+            width: 60%;
+        }
+    }
+
+    //Iformacion sobre los productos
+    .contenedor__info--prod {
+        padding-left: 7em;
+        height: 20em;
+        
+        .flex__informacion--calz {
+            img {
+                width: 18em;
+                padding-bottom: 9em;
+            }
+        
+            p {
+                font-size: 1.3em;
+                padding: 0 1em 0 4em;
+            }
+        }
+        
+        .flex__informacion--pant {
+            img {
+                width: 16em;
+            }
+        
+            p {
+                font-size: 1.3em;
+                padding: 0 1em 0 4em;
+            }
+        }
+        
+        .flex__informacion--rem {
+            img {
+                width: 16em;
+                padding-bottom: 2em;
+                padding-left: 0;
+            }
+        
+            p {
+                font-size: 1.3em;
+                padding: 0 1em 0 4em;
+            }
+        }
+    }
+
+    //Parte principal Sobre Nosotros
+    .principalSN {
+        background-position: 0 0;
+
+        h1 {
+            font-size: 5em;
+        }
+
+        h2 {
+            font-size: 2em;
+            text-shadow: 1px 1px 3px #fff;
+        }
+
+        .llamativo__SN {
+            font-size: 1.5em;
+            text-shadow: 3px 3px 5px map-get(c.$colores,"bordes");
+        }
+
+        @keyframes enviostexto {
+            50% {
+                font-size: 2em;
+            }
+
+            100% {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    // Metas
+    .principal__SN2 {
+
+        h3 {
+            font-size: 3em;
+            padding: 1em;
+        }
+
+        .contenedor__flex {
+            flex-direction: row;
+            gap: 0;
+            justify-content: space-around;
+        }
+
+        p {
+            padding: 2em 25%;
+        }
+    }
+
+    .inferior {
+        li {
+            padding-left: 2em;
+            padding-right: 2em;
+    
+            img {
+                width: 30px;
+
+                &:hover {
+                    width: 29px;
+                }
+            }
+        }
+    }
+}
