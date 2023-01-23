@@ -58,12 +58,7 @@
 }
 
 .principal {
-    background: #333333;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #dd1818, #333333);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, hsla(0, 80%, 48%, 0.301), hsla(0, 0%, 20%, 0.227)), url(../Imagenes/ImagenPrincipal.jpg);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

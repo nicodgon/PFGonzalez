@@ -45,11 +45,7 @@
 }
 
 .principal {
-  background: #333333;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, hsla(0deg, 80%, 48%, 0.301), hsla(0deg, 0%, 20%, 0.227)), url(../Imagenes/ImagenPrincipal.jpg);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -369,8 +365,11 @@
     font-size: 5em;
     padding-top: 1em;
   }
+  .contenedor__imagen {
+    padding-left: 10em;
+  }
   .contenedor__imagen img {
-    width: 240px;
+    width: 300px;
   }
   .principal2 h1 {
     font-size: 3em;
@@ -490,6 +489,12 @@
     flex-direction: row;
     gap: 0;
     justify-content: space-around;
+  }
+  .principal__SN2 .contenedor__flex .mundo {
+    width: 380px;
+  }
+  .principal__SN2 .contenedor__flex .calidad {
+    width: 260px;
   }
   .principal__SN2 p {
     padding: 2em 25%;
