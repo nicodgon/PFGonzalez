@@ -112,7 +112,6 @@
             height: $altoImagen;
             border: map-get(c.$colores, "bordes") solid 2px;
             border-radius: calc(c.$border-r*4);
-            box-shadow: c.$shadow;
         }
     
         .remera {
@@ -123,7 +122,6 @@
                 height: 14em;
                 border: map-get(c.$colores, "bordesH") solid 4px;
                 border-radius: calc(c.$border-r*4);
-                box-shadow: c.$shadow;
             }
         }
     
@@ -135,7 +133,6 @@
                 height: 18em;
                 border: map-get(c.$colores, "bordesH") solid 4px;
                 border-radius: calc(c.$border-r*4);
-                box-shadow: c.$shadow;
             }
         }
     
@@ -147,7 +144,6 @@
                 height: 14em;
                 border: map-get(c.$colores, "bordesH") solid 4px;
                 border-radius: calc(c.$border-r*4);
-                box-shadow: c.$shadow;
             }
         }
     
@@ -209,12 +205,10 @@
 
         h2 {
             font-size: 2em;
-            text-shadow: 1px 1px 3px #fff;
         }
 
         .llamativo__SN {
             font-size: 1.5em;
-            text-shadow: 3px 3px 5px map-get(c.$colores,"bordes");
         }
 
         @keyframes enviostexto {

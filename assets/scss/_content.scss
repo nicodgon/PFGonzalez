@@ -78,12 +78,10 @@
         font-size: 5em;
         color: map-get(c.$colores, "h1");
         font-weight: bold;
-        text-shadow: 3px 3px 5px map-get(c.$colores, "bordes");
     }
 
     p {
         color: #000;
-        text-shadow: 1px 1px 5px #fff;
         font-weight: bold;
         font-size: 1.6em;
         margin-left: 18%;
@@ -160,7 +158,7 @@
     padding-bottom: 4em;
 
     h1 {
-        color: #fff;
+        color: map-get(c.$colores, "h1");
         font-weight: bold;
         padding-top: 1em;
         padding-bottom: 1em;
@@ -185,7 +183,6 @@
         height: $altoImagen;
         border: map-get(c.$colores, "bordes") solid 2px;
         border-radius: calc(c.$border-r*4);
-        box-shadow: c.$shadow;
     }
 
     .remera {
@@ -253,16 +250,15 @@
         text-align: center;
         font-size: 4em;
         color: map-get(c.$colores, "h1");
-        text-shadow: 3px 3px 5px map-get(c.$colores, "bordes");
     }
 
     h2 {
+        color: #171528;      
         border-radius: .25em;
         font-weight: bold;
         margin: 0 13% 3em 13%;
         text-align: center;
         font-size: 1.4em;
-        text-shadow: 1px 1px 3px #777;
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         background-color: rgba(170, 170, 170, 0.2);
@@ -275,7 +271,6 @@
         margin-top: 1em;
         font-size: .9em;
         animation: enviostexto 1.3s infinite;
-        text-shadow: 2px 2px 1px map-get(c.$colores,"bordes");
     }
 
     @keyframes enviostexto {

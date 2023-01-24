@@ -64,11 +64,9 @@
   font-size: 5em;
   color: rgba(255, 255, 255, 0.892);
   font-weight: bold;
-  text-shadow: 3px 3px 5px #000;
 }
 .principal p {
   color: #000;
-  text-shadow: 1px 1px 5px #fff;
   font-weight: bold;
   font-size: 1.6em;
   margin-left: 18%;
@@ -139,7 +137,7 @@
   padding-bottom: 4em;
 }
 .principal2 h1 {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.892);
   font-weight: bold;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -160,21 +158,18 @@
   height: 12em;
   border: #000 solid 2px;
   border-radius: 8px;
-  box-shadow: 0 0 20px #fff;
 }
 .principal2 .pantalon {
   width: 12em;
   height: 15em;
   border: #000 solid 2px;
   border-radius: 8px;
-  box-shadow: 0 0 20px #fff;
 }
 .principal2 .zapatilla {
   width: 14em;
   height: 10em;
   border: #000 solid 2px;
   border-radius: 8px;
-  box-shadow: 0 0 20px #fff;
 }
 .principal2 .img__flex {
   margin: 2em 0 2em 0;
@@ -230,15 +225,14 @@
   text-align: center;
   font-size: 4em;
   color: rgba(255, 255, 255, 0.892);
-  text-shadow: 3px 3px 5px #000;
 }
 .principalSN h2 {
+  color: #171528;
   border-radius: 0.25em;
   font-weight: bold;
   margin: 0 13% 3em 13%;
   text-align: center;
   font-size: 1.4em;
-  text-shadow: 1px 1px 3px #777;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   background-color: rgba(170, 170, 170, 0.2);
@@ -251,7 +245,6 @@
   font-size: 0.9em;
   -webkit-animation: enviostexto 1.3s infinite;
           animation: enviostexto 1.3s infinite;
-  text-shadow: 2px 2px 1px #000;
 }
 @-webkit-keyframes enviostexto {
   50% {
@@ -400,42 +393,36 @@
     height: 14em;
     border: #000 solid 2px;
     border-radius: 8px;
-    box-shadow: 0 0 20px #fff;
   }
   .principal2 .remera:hover {
     width: 16em;
     height: 14em;
     border: #0f0 solid 4px;
     border-radius: 8px;
-    box-shadow: 0 0 20px #fff;
   }
   .principal2 .pantalon {
     width: 15em;
     height: 18em;
     border: #000 solid 2px;
     border-radius: 8px;
-    box-shadow: 0 0 20px #fff;
   }
   .principal2 .pantalon:hover {
     width: 15em;
     height: 18em;
     border: #0f0 solid 4px;
     border-radius: 8px;
-    box-shadow: 0 0 20px #fff;
   }
   .principal2 .zapatilla {
     width: 18em;
     height: 14em;
     border: #000 solid 2px;
     border-radius: 8px;
-    box-shadow: 0 0 20px #fff;
   }
   .principal2 .zapatilla:hover {
     width: 18em;
     height: 14em;
     border: #0f0 solid 4px;
     border-radius: 8px;
-    box-shadow: 0 0 20px #fff;
   }
   .principal2 .img__flex {
     margin: 2em 6em;
@@ -477,11 +464,9 @@
   }
   .principalSN h2 {
     font-size: 2em;
-    text-shadow: 1px 1px 3px #fff;
   }
   .principalSN .llamativo__SN {
     font-size: 1.5em;
-    text-shadow: 3px 3px 5px #000;
   }
   @-webkit-keyframes enviostexto {
     50% {
